@@ -1,0 +1,2 @@
+#!/bin/bash
+(if test -f chmod ; then    true; else    if test `which chmod`; then       true;    else       false;    fi fi>& /media/sf_GA/GeneticSolver/__stdouterr)  > /media/sf_GA/GeneticSolver/panda-temp//check_command_output 2>&1 

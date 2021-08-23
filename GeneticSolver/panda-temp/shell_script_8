@@ -1,0 +1,2 @@
+#!/bin/bash
+(/usr/bin/clang-6.0 -D__NO_INLINE__    -D_FORTIFY_SOURCE=0  -m32 -mno-sse2  -c -fplugin=/home/ubuntu/panda/gcc_plugins/clang6_plugin_ASTAnalyzer.so -Xclang -add-plugin -Xclang clang6_plugin_ASTAnalyzer -Xclang -plugin-arg-clang6_plugin_ASTAnalyzer -Xclang -outputdir -Xclang -plugin-arg-clang6_plugin_ASTAnalyzer -Xclang /media/sf_GA/GeneticSolver/panda-temp/ -o /media/sf_GA/GeneticSolverrun-3955-25e5-8dae-178d.o -D'printf(fmt, ...)=' -D__BAMBU__ "/media/sf_GA/GeneticSolver/mips.c")  > /media/sf_GA/GeneticSolver/panda-temp/__gcc_output 2>&1 

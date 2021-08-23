@@ -1,0 +1,2 @@
+#!/bin/bash
+(/media/sf_GA/GeneticSolver/HLS_output//simulation/test)  > /media/sf_GA/GeneticSolver/panda-temp/shell_output_18 2>&1 

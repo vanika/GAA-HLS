@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<bambu_results bambu_args="bambu --simulate -funsafe-math-optimizations -fno-tree-loop-optimize -O2 mips.c " bambu_version="Version: PandA 0.9.7-dev - Revision 151822f6eb6b28b68ef7cde4c7c3c0add185ed9d-panda-0.9.7-dev" timestamp="2021-08-23T15:58:30" benchmark_name="main_1">
+  <CYCLES value="4028"/>
+  <HLS_execution_time value="3.93000000000000000006"/>
+</bambu_results>

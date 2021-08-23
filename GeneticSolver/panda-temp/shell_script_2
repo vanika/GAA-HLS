@@ -1,0 +1,2 @@
+#!/bin/bash
+(cd /media/sf_GA/GeneticSolver/panda-temp//temp-archive-dir-a731-44a0-4142-dae1; ar x /home/ubuntu/panda/lib/panda/libhls-cdiv_gcc7.a)  > /media/sf_GA/GeneticSolver/panda-temp/shell_output_2 2>&1 

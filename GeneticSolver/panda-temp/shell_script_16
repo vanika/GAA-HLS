@@ -1,0 +1,2 @@
+#!/bin/bash
+(/usr/bin/gcc-7 /media/sf_GA/GeneticSolver/HLS_output//simulation/values.c   -O0 -D'printf(fmt, ...)=' -D__BAMBU__  -iquote /media/sf_GA/GeneticSolver/HLS_output//simulation   -D__NO_INLINE__  -mlong-double-64 -D_FORTIFY_SOURCE=0  -m32 -mno-sse2 -fwrapv -ffloat-store -flax-vector-conversions -msse2 -mfpmath=sse -D'__builtin_bambu_time_start()=' -D'__builtin_bambu_time_stop()='  -fexcess-precision=standard  -o /media/sf_GA/GeneticSolver/HLS_output//simulation/test )  > /media/sf_GA/GeneticSolver/panda-temp/__gcc_output 2>&1 

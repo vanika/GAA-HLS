@@ -1,0 +1,7 @@
+-funsafe-math-optimizations
+-fno-guess-branch-probability
+-fno-ivopts
+-fno-tree-loop-optimize
+-fno-inline-functions
+-funroll-all-loops
+-O2
