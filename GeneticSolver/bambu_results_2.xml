@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<bambu_results bambu_args="bambu --simulate -fno-guess-branch-probability -funroll-all-loops mips.c " bambu_version="Version: PandA 0.9.7-dev - Revision 151822f6eb6b28b68ef7cde4c7c3c0add185ed9d-panda-0.9.7-dev" timestamp="2021-08-23T15:58:57" benchmark_name="main_2">
-  <CYCLES value="4017"/>
-  <HLS_execution_time value="3.92000000000000000007"/>
-</bambu_results>

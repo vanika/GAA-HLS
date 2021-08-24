@@ -1,2 +1,0 @@
-#!/bin/bash
-(if test -f /media/sf_GA/GeneticSolver/./simulate_main.sh ; then    true; else    if test `which /media/sf_GA/GeneticSolver/./simulate_main.sh`; then       true;    else       false;    fi fi>& /media/sf_GA/GeneticSolver/__stdouterr)  > /media/sf_GA/GeneticSolver/panda-temp//check_command_output 2>&1 

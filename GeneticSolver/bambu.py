@@ -5,7 +5,7 @@ import xml.etree.ElementTree as ET
 
 class Bambu:
 
-    def __init__(self, program_name="mips.c"):
+    def __init__(self, program_name="blowfish/bf.c"):
         self.optimization_flags = dict()
         self.program_name = program_name
         self.get_flags()
@@ -51,7 +51,7 @@ class Bambu:
         return perf
 
     def parse_performances_cmd(self, output):
-        hls_pattern = "cycles"
+        hls_pattern = "Total cycles"
         number_cycles_string = ""
         output = output.splitlines()
         for l in output:

@@ -1,2 +1,0 @@
-#!/bin/bash
-(/media/sf_GA/GeneticSolver/./simulate_main.sh)  > /media/sf_GA/GeneticSolver/panda-temp//simulation_output 2>&1 

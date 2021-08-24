@@ -100,7 +100,7 @@ class GeneticSolver:
         """
 
         combinations = list(map(list, product([0, 1], repeat=len(self.bambu.get_flags()))))
-        combinations = combinations[:len(combinations)//16]
+        combinations = combinations[:len(combinations)//32]
         return np.split(np.random.binomial(1, 0.5, len(self.bambu.get_flags()) * len(combinations)).astype('uint8'), len(combinations))
 
     def evolve(self):
