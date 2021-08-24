@@ -57,7 +57,7 @@ class GeneticSolver:
     def solve(self, n_generations=-1):
         """
         :param n_generations: number of evolution generations. Overrides initialization value if specified
-        :return: 20x20 array that represents the best start field found and associated fitness value
+        :return: array that represents the best start field found and associated fitness value
         """
         if not (self._population and self.warm_start):
             self._population = self._generate_population()
@@ -87,15 +87,6 @@ class GeneticSolver:
     def _generate_population(self):
         """
         Generating initial population of individual solutions
-
-        Regardless of strategy, we make 5 initial "warming" steps to make distribution closer to the problem.
-
-        Strategies description:
-
-            * Uniform: each cell has equal probability of being initialized as alive or dead. This will introduce no
-                       prior information at all
-            * Covering: Each individual is generated with it's own probability of having each cell 'alive'. This gives
-                       on average higher initial fitness score, but has no observed effect on long-term behavior
         :return: initial population as a list of 20x20 arrays
         """
 
@@ -106,7 +97,6 @@ class GeneticSolver:
     def evolve(self):
         """
         Evolution step
-        :param Y: 20x20 array that represents field in stopping condition
         :param delta: number of steps to revert
         :return: new generation of the same size along with scores of the best retained individuals
         """
@@ -181,8 +171,6 @@ class GeneticSolver:
         Calculate fitness for particular candidate (start configuration of the field)
         Currently unused, as fitness scoring was implemented directly into Cython `life` module.
         :param start_field: candidate (start configuration)
-        :param end_field: target (stop configuration)
-        :param delta: number of steps to proceed before comparing to stop configuration
         :return: value in range [0, 1] that indicates fractions of cells that match their state
         """
         return self.bambu.run(start_field)
@@ -191,8 +179,6 @@ class GeneticSolver:
         """
         Apply fitness function for each gene in a population
         :param population: list of candidate solutions
-        :param Y: 20x20 array that represents field in stopping condition
-        :param delta: number of steps to revert
         :return: list of scores for each solution
         """
         return [self.fitness(gene) for gene in population]
@@ -201,8 +187,6 @@ class GeneticSolver:
         """
         Apply fitness function for each gene in a population in parallel
         :param population: list of candidate solutions
-        :param Y: 20x20 array that represents field in stopping condition
-        :param delta: number of steps to revert
         :return: list of scores for each solution
         """
         return self.pool.map(partial(parallel_fitness), population)
